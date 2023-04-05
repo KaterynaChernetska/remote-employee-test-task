@@ -1,0 +1,15 @@
+.button {
+  background-color: $logo-color;
+  color: $black;
+  font-size: $fz-16;
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 10px 40px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transition: transform 0.2s;
+    transform: translateY(-3px);
+    background-color: $white;
+  }
+}

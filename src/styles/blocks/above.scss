@@ -1,0 +1,50 @@
+.above {
+  padding: 100px 0;
+
+  &_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &_img {
+    width: 576px;
+    height: 576px;
+    margin-right: 100px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &_content {
+    width: 30%;
+
+    .above-title {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 48px;
+    }
+
+    .above-text {
+      max-width: 400px;
+      margin-bottom: 30px;
+      line-height: 25px;
+      font-size: $fz-18;
+    }
+
+    .above-cursive {
+      display: block;
+      margin-bottom: 48px;
+      font-style: italic;
+      font-weight: 400;
+      font-size: $fz-24;
+    }
+
+    .above-text:nth-last-child(2) {
+      margin-bottom: 90px;
+    }
+  }
+}
