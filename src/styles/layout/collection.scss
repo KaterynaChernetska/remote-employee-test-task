@@ -10,12 +10,20 @@
   position: relative;
 
   &_wrapper {
+    padding: 0;
+   @include onDesktop{
     padding: 100px 0 20px 13%;
+   }
 
     p {
+      // font-size: $fz-18;
+      max-width: 100%;
+      margin-bottom: 20px;
+    @include onDesktop{
       font-size: $fz-18;
       max-width: 40%;
       margin-bottom: 120px;
+    }
     }
   }
 
@@ -31,11 +39,17 @@
   &_item {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
-    padding-bottom: 60px;
-    margin-bottom: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
     border-bottom: 2px solid $decoration-swiper;
+    @include onDesktop{
+      padding-bottom: 60px;
+      margin-bottom: 40px;
+      flex-direction: row;
+    }
 
     &:last-child {
       border-bottom: unset;
@@ -43,19 +57,28 @@
   }
 
   &_content {
+    width:100%;
+   @include onDesktop{
     width: 55%;
+   }
 
     h3 {
-      font-size: $fz-35;
       margin-bottom: 3px;
+      @include onDesktop{
+        font-size: $fz-35;
+    
+      }
     }
 
     span {
-      font-size: $fz-24;
+      
       color: #717a7f;
       font-weight: 700;
       margin-bottom: 20px;
       display: block;
+      @include onDesktop{
+        font-size: $fz-24;
+      }
     }
 
     p {
@@ -69,8 +92,12 @@
   }
 
   &_img {
-    width: 25%;
+    width: 100%;
+    margin-top: 20px;
+    @include onDesktop{
+      width: 25%;
     overflow: hidden;
+    }
 
     img {
       width: 100%;

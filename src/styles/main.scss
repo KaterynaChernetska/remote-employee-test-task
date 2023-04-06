@@ -1,12 +1,14 @@
 @import "./utils.scss";
 
-@import "./blocks/header.scss";
-@import "./blocks/swiper.scss";
-@import "./blocks/featured.scss";
-@import "./blocks/above.scss";
-@import "./blocks/editors.scss";
-@import "./blocks/collection.scss";
-@import "./blocks/subscribe.scss";
-@import "./blocks/footer.scss";
-@import "./blocks/container.scss";
-@import "./blocks/button.scss";
+@import "./layout/header.scss";
+@import "./layout/swiper.scss";
+@import "./layout/featured.scss";
+@import "./layout/above.scss";
+@import "./layout/editors.scss";
+@import "./layout/collection.scss";
+@import "./layout/subscribe.scss";
+@import "./layout/footer.scss";
+@import "./layout/container.scss";
+@import "./layout/button.scss";
+@import "./vissually_hidden";
+@import "./layout/mob";

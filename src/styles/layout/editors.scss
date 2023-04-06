@@ -1,34 +1,53 @@
 .editors {
-  padding: 100px 0;
+  padding: 20px 0;
+  @include onDesktop {
+    padding: 100px 0;
+  }
 
   &_wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+    flex-direction: column;
+    @include onDesktop {
+      flex-direction: row;
+    }
   }
 
   &_title {
-    width: 15%;
-    text-align: right;
+    width: 100%;
+    @include onDesktop {
+      width: 15%;
+      text-align: right;
+    }
   }
 
   &_subtitle {
-    font-size: $fz-35;
     font-weight: 700;
     margin-bottom: 20px;
+
+    @include onDesktop {
+      font-size: $fz-35;
+    }
   }
 
   &_text {
-    font-size: $fz-18;
     line-height: 20px;
+    margin-bottom: 20px;
+    @include onDesktop {
+      font-size: $fz-18;
+    }
   }
 }
 
 .slider-editors {
-  width: 75%;
+  width: 100%;
   overflow: hidden;
   height: 100%;
+  @include onDesktop{
+    width: 75%;
+  }
 
   .swiper-editors {
     width: 100%;
@@ -75,11 +94,9 @@
           height: 500px;
           overflow: hidden;
 
-          &:hover {
-            .swiper-img-decoration {
-              transition: bottom 0.3s;
-              bottom: 0;
-            }
+          .swiper-img-decoration {
+            transition: bottom 0.3s;
+            bottom: 0;
           }
 
           img {
@@ -138,18 +155,38 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
+      gap:5px;
 
-      .button-prev, .button-next {
+      @include onDesktop{
+        margin-bottom: 50px;
+      }
+
+      .button-prev,
+      .button-next {
         position: unset;
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
         border-radius: 100%;
         background-color: $white;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        @include onDesktop{
+          position: unset;
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          background-color: $white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+        &:hover {
+          background-color: $accent-color;
+        }
       }
 
       .swiper-sort {
@@ -167,16 +204,24 @@
       }
 
       .icon-next {
-        width: 15px;
-        height: 15px;
+        width: 10px;
+        height: 10px;
         transform: rotate(-180deg);
         stroke: $black;
+        @include onDesktop{
+          width: 15px;
+          height: 15px;
+        }
       }
 
       .icon-prev {
-        width: 15px;
-        height: 15px;
+        width: 10px;
+        height: 10px;
         stroke: $black;
+        @include onDesktop{
+          width: 15px;
+          height: 15px;
+        }
       }
 
       .decoration-left {

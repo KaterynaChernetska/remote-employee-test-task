@@ -1,15 +1,18 @@
 .button {
-  background-color: $logo-color;
+  background-color: $accent-color;
   color: $black;
-  font-size: $fz-16;
   font-weight: 700;
   border-radius: 25px;
-  padding: 10px 40px;
+  padding: 10px 20px;
   transition: transform 0.2s;
+  @include onDesktop{
+    font-size: $fz-16;
+    padding: 10px 40px;
+  }
 
   &:hover {
     transition: transform 0.2s;
-    transform: translateY(-3px);
+    transform: scale(1.1);
     background-color: $white;
   }
 }
